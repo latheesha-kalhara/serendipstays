@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serendip Stays - Discover Sri Lanka's Finest Accommodations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-turquoise: #1A7B88;
+            --secondary-beige: #E6D2AA;
+            --tropical-green: #4CAF50;
+            --warm-terracotta: #D35400;
+            --off-white: #F9F7F3;
+            --light-gray: #E5E5E5;
+            --medium-gray: #808080;
+            --dark-charcoal: #333333;
+            --sunset-orange: #FF7E5F;
+            --ocean-blue: #3498DB;
+			--light-gray
+			--shadow
+			--white:#FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-charcoal);
+            background-color: var(--off-white);
+        }
+
+        /* Header */
+        header {
+            background: rgba(26, 123, 136, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--secondary-beige);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-size: 1.2rem;
+            color: var(--primary-turquoise);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--secondary-beige);
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: 
+                        url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1500px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .search-bar {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: end;
+        }
+
+        .search-field {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .search-field label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark-charcoal);
+        }
+
+        .search-field input, .search-field select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--light-gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-field input:focus, .search-field select:focus {
+            outline: none;
+            border-color: var(--primary-turquoise);
+        }
+		.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /* Adds space between hero text and search bar */
+}
+
+        .search-btn {
+            background: var(--primary-turquoise);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+
+        .search-btn:hover {
+            background: var(--warm-terracotta);
+            transform: translateY(-2px);
+        }
+		.btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #333;
+            border: 2px solid #e0e0e0;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .quick-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+
+
+        /* Sections */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-turquoise);
+        }
+		 
+
+        .section-title1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 80;
+            text-align: left;
+            margin-bottom: 3rem;
+            color: var(--primary-turquoise);
+        }
+		 
+		
+		
+		.map-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container {
+            position: center;
+            height: 400px;
+			width: 1840px;
+            border-radius: 15px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .map-placeholder {
+            text-align: center;
+            color: #666;
+        }
+
+        .map-placeholder h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Popular Destinations */
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .destination-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .destination-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .destination-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 2rem;
+            color: white;
+        }
+
+        .destination-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .destination-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+		
+		 
+		
+		/* Featured Hotels */
+		
+		
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .property-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .property-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .property-image {
+            height: 200px;
+            background: linear-gradient(45deg, var(--golden-sand), #f0e6c7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--deep-turquoise);
+        }
+
+        .property-info {
+            padding: 1.5rem;
+        }
+
+        .property-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-turquoise);
+        }
+
+        .property-location {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .property-price {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary-turquoise);
+        }
+
+
+        /* Special Offers */
+        .offers-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .offer-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .offer-badge {
+            background: var(--sunset-orange);
+            color: white;
+            padding: 0.5rem 1rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            border-radius: 20px;
+            z-index: 2;
+        }
+
+        .offer-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .offer-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .offer-content {
+            padding: 1.5rem;
+        }
+
+        .offer-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-turquoise);
+        }
+
+        .offer-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--warm-terracotta);
+            margin-bottom: 1rem;
+        }
+
+        .offer-price .old-price {
+            font-size: 1rem;
+            color: var(--medium-gray);
+            text-decoration: line-through;
+            margin-left: 0.5rem;
+        }
+		
+		
+		
+		
+		/* Booking Form */
+        container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+			
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .form-header p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .booking-form {
+            display: grid;
+            gap: 30px;
+        }
+
+        .form-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+       
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .required {
+            color: #e74c3c;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group input:invalid {
+            border-color: ;
+        }
+
+        .form-group input:valid {
+            border-color: #;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .checkbox-item:hover {
+            border-color: #1A7B88;
+            background: #f0f4ff;
+			
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin: 0;
+        }
+
+        .price-summary {
+            background: linear-gradient(135deg, #1A7B88, #764ba2);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+			box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .price-total {
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+			box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #333;
+            border: 2px solid #e0e0e0;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .success-message {
+            background: #27ae60;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .guest-counter {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .counter-btn {
+            width: 35px;
+            height: 35px;
+            border: none;
+            border-radius: 50%;
+            background: #1A7B88;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .counter-btn:hover {
+            background: #D35400;
+            transform: scale(1.1);
+        }
+
+        .counter-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .counter-value {
+            font-size: 1.1rem;
+            font-weight: bold;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-actions {
+                flex-direction: column;
+            }
+
+            .form-header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Property Categories */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .category-icon {
+            font-size: 3rem;
+            color: var(--primary-turquoise);
+            margin-bottom: 1rem;
+        }
+
+        .category-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark-charcoal);
+        }
+
+        .category-count {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--secondary-beige);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--dark-charcoal);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-turquoise);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        .author-info h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info span {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+
+        .rating {
+            color: #FFD700;
+            margin-top: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-charcoal);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--secondary-beige);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--secondary-beige);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-turquoise);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--warm-terracotta);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 1rem;
+            text-align: center;
+            color: #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .search-bar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .search-field {
+                min-width: 100%;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .header-content {
+                padding: 0 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-turquoise);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--warm-terracotta);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-turquoise);
+            border: 2px solid var(--primary-turquoise);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-turquoise);
+            color: white;
+        }
+		.map-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.map-container {
+    margin-top: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <span>Serendip <span style="color: var(--warm-terracotta);">Stays</span></span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+					<li><a href="#featured hotels">Featured Hotels</a></li>
+                    <li><a href="#offers">Offers</a></li>
+                    <li><a href="#categories">Properties</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>"Your Gateway to Sri Lanka's Finest Stays"</h1>
+            <p>From luxury resorts to boutique hotels, find your perfect accommodation in the Pearl of the Indian Ocean...</p>
+            
+            <div class="search-bar">
+                <div class="search-field">
+                    <label for="destination">Destination</label>
+                    <select id="destination">
+                        <option value="">Select Destination</option>
+                        <option value="colombo">Colombo</option>
+                        <option value="kandy">Kandy</option>
+                        <option value="galle">Galle</option>
+                        <option value="nuwara-eliya">Nuwara Eliya</option>
+                        <option value="bentota">Bentota</option>
+                        <option value="mirissa">Mirissa</option>
+						<option value="more">More</option>
+                    </select>
+                </div>
+                <div class="search-field">
+                    <label for="checkin">Check-in</label>
+                    <input type="date" id="checkin">
+                </div>
+                <div class="search-field">
+                    <label for="checkout">Check-out</label>
+                    <input type="date" id="checkout">
+                </div>
+                <div class="search-field">
+                    <label for="guests">Guests</label>
+                    <select id="guests">
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4+ Guests</option>
+                    </select>
+                </div>
+                <button class="search-btn">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+			 <div class="quick-actions">
+                <button class="btn btn-primary" onclick="searchHotels()">Search Hotels</button>
+            </div>
+        </div>
+    </section>
+	
+	 <!-- Map Section -->
+	<div class="map-section">
+    <h2 class="section-title">Hotel Locations</h2>
+    
+    <div class="map-container" id="mapContainer">
+        <!-- Embedded Google Map -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63311.30544448943!2d79.84195285711147!3d6.927078152892197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2595a6dcd9b6b%3A0x9f9a1a418f1f8f67!2sColombo!5e0!3m2!1sen!2slk!4v1620000000000!5m2!1sen!2slk"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <div class="quick-actions" style="margin-top: 20px;">
+        <a href="https://www.google.com/maps/@6.8217012,80.0470428,14z?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+            <button class="btn btn-primary">Open Google Maps</button>
+        </a>
+        <a href="https://www.google.com/maps/search/hotels+near+by+me/@6.8216995,80.0470428,14z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+            <button class="btn btn-primary">Find Nearby Hotels</button>
+        </a>
+    </div>
+</div>
+
+
+    <!-- Popular Destinations -->
+    <section id="destinations" class="section">
+        <div class="container">
+            <h2 class="section-title">Popular Destinations</h2>
+            <div class="destinations-grid">
+                <div class="destination-card">
+					<a href="https://www.google.com/maps/place/Sigiriya/@7.9546777,80.7236358,14z/data=!3m1!4b1!4m6!3m5!1s0x3afca0dfa73179d1:0x1e04c1150cff0edf!8m2!3d7.9541085!4d80.754698!16s%2Fm%2F0b6jy8p?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D">
+                    <img src="../New New/Newwwwwwwwww/New folder/Photos/daniele-franchi-nhzzN8HIT0s-unsplash.jpg" alt="Sigiriya Rock" width="320" height="350">
+                    <div class="destination-overlay">
+                        <div class="destination-name">Sigiriya</div>
+                        <div class="destination-description">Ancient rock fortress with breathtaking views and luxury accommodations nearby</div>
+                    </div></a>
+                </div>
+                <div class="destination-card">
+					<a href="https://www.google.com/maps/place/Kandy/@7.2945434,80.5845816,13z/data=!3m1!4b1!4m6!3m5!1s0x3ae366266498acd3:0x411a3818a1e03c35!8m2!3d7.2905715!4d80.6337262!16zL20vMDFzZzRf?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D">
+                    <img src="../New New/Newwwwwwwwww/New folder/Photos/promodhya-abeysekara-rdrGpquZ1Hc-unsplash.jpg" alt="Kandy Temple">
+                    <div class="destination-overlay">
+                        <div class="destination-name">Kandy</div>
+                        <div class="destination-description">Cultural capital with sacred temples and boutique hotels in the hills</div>
+                    </div></a>
+                </div>
+				<div class="destination-card">
+                    <img src="../New New/Newwwwwwwwww/New folder/Photos/The+Common+Wanderer-9888.jpg" alt="Tea Plantations">
+                    <div class="destination-overlay">
+                        <div class="destination-name">Ella</div>
+                        <div class="destination-description">Cool climate hill station with tea plantations and colonial-era hotels</div>
+                    </div>
+                </div>
+               
+                <div class="destination-card">
+                    <img src="../New New/Newwwwwwwwww/New folder/Photos/thumb.jpg" alt="Beach Resort">
+                    <div class="destination-overlay">
+                        <div class="destination-name">Bentota</div>
+                        <div class="destination-description">Golden beaches with luxury beach resorts and water sports activities</div>
+                    </div>
+                </div>
+               <div class="destination-card">
+                    <img src="../New New/Newwwwwwwwww/New folder/Photos/y-yu-fnySGfSMY-s-unsplash.jpg" alt="Galle Fort" width="360" height="250">
+                    <div class="destination-overlay">
+                        <div class="destination-name">Galle</div>
+                        <div class="destination-description">Historic fort city with charming heritage hotels and stunning coastal views</div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="../New New/Newwwwwwwwww/New folder/Photos/dinuka-lankaloka-iduEaeBB_rQ-unsplash.jpg" alt="Whale Watching">
+                    <div class="destination-overlay">
+                        <div class="destination-name">Mirissa</div>
+                        <div class="destination-description">Whale watching paradise with beachfront villas and eco-friendly resorts</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<!-- Listings Page -->
+    <div id="listings" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Hotels</h2>
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-image">
+						<img src="../New New/Newwwwwwwwww/New folder/Photos/611809702.jpg" width="370" height="225" >
+					</div>
+                    <div class="property-info">
+                        <h3 class="property-title">Colombo City Hotel</h3>
+                        <p class="property-location">📍 Colombo Fort</p>
+                        <p class="property-price">LKR 8,500 / night</p>
+                    </div>
+              </div>
+				<div class="property-card">
+                    <div class="property-image">
+						<img src="../New New/Newwwwwwwwww/New folder/Photos/aerial-photography-2.jpg" width="370" height="225" >
+					</div>
+                    <div class="property-info">
+                        <h3 class="property-title">The Golden Ridge</h3>
+                        <p class="property-location">📍 Nuwara Eliya</p>
+                        <p class="property-price">LKR 25,500 / night</p>
+                  </div>
+                </div>
+                
+              <div class="property-card">
+                    <div class="property-image">
+						<img src="../New New/Newwwwwwwwww/New folder/Photos/100601160.jpg" width="370" height="225" >
+						</div>
+                    <div class="property-info">
+                        <h3 class="property-title">Jetwing Blue Resort</h3>
+                        <p class="property-location">📍 Negombo</p>
+                        <p class="property-price">LKR 11,000 / night</p>
+                  </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">
+					  <img src="../New New/Newwwwwwwwww/New folder/Photos/210372174.jpg" width="370" height="225" >
+					</div>
+                    <div class="property-info">
+                        <h3 class="property-title">Hotel Sigiriya</h3>
+                        <p class="property-location">📍 Sigiriya</p>
+                        <p class="property-price">LKR 16,000 / night</p>
+                  </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">
+						<img src="../New New/Newwwwwwwwww/New folder/Photos/248069_16062916430044244107.jpg" width="370" height="225" >
+					</div>
+                    <div class="property-info">
+                        <h3 class="property-title">Mandara Resort Mirissa</h3>
+                        <p class="property-location">📍 Mirissa</p>
+                        <p class="property-price">LKR 13,500 / night</p>
+                  </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">
+						<img src="../New New/Newwwwwwwwww/New folder/Photos/hero-2.jpg" width="370" height="225" >
+					</div>
+                    <div class="property-info">
+                      <h3 class="property-title">Tropical Paradise</h3>
+                        <p class="property-location">📍 Hikkaduwa</p>
+                        <p class="property-price">LKR 14,000 / night</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+	
+	
+
+    <!-- Special Offers -->
+    <section id="offers" class="section">
+        <div class="container">
+            <h2 class="section-title">Special Offers</h2>
+            <div class="offers-container">
+                <div class="offer-card">
+                    <div class="offer-image">
+                        <div class="offer-badge">30% OFF</div>
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Hotel">
+                    </div>
+                    <div class="offer-content">
+                        <div class="offer-title">Luxury Beach Resort Package</div>
+                        <div class="offer-price">
+                            LKR 36,000 <span class="old-price">LKR 50,000</span>
+                        </div>
+                        <p>3 nights at a 5-star beachfront resort including breakfast and spa treatments</p>
+                        <a href="#" class="btn btn-primary" style="margin-top: 1rem;">Book Now</a>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-image">
+                        <div class="offer-badge">25% OFF</div>
+                        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hill Country Hotel">
+                    </div>
+                    <div class="offer-content">
+                        <div class="offer-title">Hill Country Retreat</div>
+                        <div class="offer-price">
+                            LKR 25,000&nbsp; <span class="old-price">LKR 35,000&nbsp;</span>
+                        </div>
+                        <p>Tea plantation experience with guided tours and traditional Sri Lankan cuisine.</p>
+                        <p>&nbsp;</p>
+<a href="#" class="btn btn-primary" style="margin-top: 1rem;">Book Now</a>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-image">
+                        <div class="offer-badge">FREE UPGRADE</div>
+                        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cultural Hotel">
+                    </div>
+                    <div class="offer-content">
+                        <div class="offer-title">Cultural Heritage Experience</div>
+                        <div class="offer-price">
+                            LKR 28,000&nbsp; <span class="old-price">LKR 40,000</span>
+                        </div>
+                        <p>Stay in the heart of Kandy with complimentary cultural show tickets and temple tours</p>
+                        <a href="#" class="btn btn-primary" style="margin-top: 1rem;">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<!-- Booking Page -->
+    <div class="container">
+      <div class="form-header">
+		  <h2 class="section-title">Complete Your Booking</h2>
+        </div>
+
+        <form class="booking-form" id="bookingForm">
+            <!-- Hotel & Stay Details -->
+            <div class="form-section">
+              <h3 class="section-title1">Hotel &amp; Stay Details</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="hotelName">Hotel Name <span class="required">*</span></label>
+                        <select id="hotelName" name="hotelName" required>
+                            <option value="">Select a hotel</option>
+                            <option value="grand-plaza">Grand Plaza Hotel</option>
+                            <option value="city-center">City Center Inn</option>
+                            <option value="luxury-resort">Luxury Resort & Spa</option>
+                            <option value="budget-stay">Budget Stay Hotel</option>
+                        </select>
+                        <div class="error-message">Please select a hotel</div>
+                  </div>
+                    
+                    <div class="form-group">
+                        <label for="roomType">Room Type <span class="required">*</span></label>
+                        <select id="roomType" name="roomType" required>
+                            <option value="">Select room type</option>
+                            <option value="standard">Standard Room</option>
+                            <option value="deluxe">Deluxe Room</option>
+                            <option value="suite">Suite</option>
+                            <option value="presidential">Presidential Suite</option>
+                        </select>
+                        <div class="error-message">Please select a room type</div>
+                    </div>
+              </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="checkinDate">Check-in Date <span class="required">*</span></label>
+                      <input type="date" id="checkinDate" name="checkinDate" required>
+                        <div class="error-message">Please select check-in date</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="checkoutDate">Check-out Date <span class="required">*</span></label>
+                      <input type="date" id="checkoutDate" name="checkoutDate" required>
+                        <div class="error-message">Please select check-out date</div>
+                    </div>
+                </div>
+
+              <div class="form-row">
+                    <div class="form-group">
+                        <label for="adults">Adults</label>
+                        <div class="guest-counter">
+                          <button type="button" class="counter-btn" onclick="changeCounter('adults', -1)">-</button>
+                            <span class="counter-value" id="adultsCount">2</span>
+                            <button type="button" class="counter-btn" onclick="changeCounter('adults', 1)">+</button>
+                        </div>
+                        <input type="hidden" id="adults" name="adults" value="2">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="children">Children</label>
+                        <div class="guest-counter">
+                            <button type="button" class="counter-btn" onclick="changeCounter('children', -1)">-</button>
+                            <span class="counter-value" id="childrenCount">0</span>
+                            <button type="button" class="counter-btn" onclick="changeCounter('children', 1)">+</button>
+                        </div>
+                        <input type="hidden" id="children" name="children" value="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="rooms">Number of Rooms</label>
+                        <div class="guest-counter">
+                            <button type="button" class="counter-btn" onclick="changeCounter('rooms', -1)">-</button>
+                            <span class="counter-value" id="roomsCount">1</span>
+                            <button type="button" class="counter-btn" onclick="changeCounter('rooms', 1)">+</button>
+                        </div>
+                        <input type="hidden" id="rooms" name="rooms" value="1">
+                    </div>
+              </div>
+          </div>
+
+            <!-- Guest Information -->
+            <div class="form-section">
+              <h3 class="section-title1">Guest Information</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" required>
+                        <div class="error-message">Please enter your first name</div>
+                  </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" required>
+                        <div class="error-message">Please enter your last name</div>
+                    </div>
+              </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="error-message">Please enter a valid email address</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <div class="error-message">Please enter your phone number</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="country">Country <span class="required">*</span></label>
+                        <select id="country" name="country" required>
+                            <option value="">Select country</option>
+                            <option value="US">United States</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="CA">Canada</option>
+                            <option value="AU">Australia</option>
+                            <option value="FR">France</option>
+                            <option value="DE">Germany</option>
+                            <option value="JP">Japan</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error-message">Please select your country</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="idNumber">ID/Passport Number</label>
+                        <input type="text" id="idNumber" name="idNumber">
+                    </div>
+                </div>
+          </div>
+
+            <!-- Additional Services -->
+            <div class="form-section">
+              <h3 class="section-title1">Additional Services</h3>
+                
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="breakfast" name="services" value="breakfast">
+                        <label for="breakfast">Breakfast Package (+$25/night)</label>
+                  </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="spa" name="services" value="spa">
+                        <label for="spa">Spa Access (+$40/night)</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="parking" name="services" value="parking">
+                        <label for="parking">Parking (+$15/night)</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="wifi" name="services" value="wifi">
+                        <label for="wifi">Premium WiFi (+$10/night)</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="airport" name="services" value="airport">
+                        <label for="airport">Airport Transfer (+$35 one way)</label>
+                    </div>
+              </div>
+          </div>
+
+            <!-- Special Requests -->
+            <div class="form-section">
+              <h3 class="section-title1">Special Requests</h3>
+                
+                <div class="form-group">
+                  <label for="specialRequests">Special Requests or Comments</label>
+                    <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any special requests, dietary requirements, or additional information..."></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="arrivalTime">Estimated Arrival Time</label>
+                        <input type="time" id="arrivalTime" name="arrivalTime">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="purpose">Purpose of Visit</label>
+                        <select id="purpose" name="purpose">
+                            <option value="">Select purpose</option>
+                            <option value="business">Business</option>
+                            <option value="leisure">Leisure</option>
+                            <option value="conference">Conference</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Price Summary -->
+            <div class="price-summary">
+                <h3 style="margin-bottom: 20px;">💰 Price Summary</h3>
+                <div class="price-row">
+                    <span>Room Rate (per night):</span>
+                    <span id="roomRate">LKR 15,000</span>
+                </div>
+                <div class="price-row">
+                    <span>Number of Nights:</span>
+                    <span id="numberOfNights">1</span>
+                </div>
+                <div class="price-row">
+                    <span>Additional Services:</span>
+                    <span id="additionalServices">LKR 0</span>
+                </div>
+                <div class="price-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">LKR 15,000</span>
+                </div>
+                <div class="price-row">
+                    <span>Taxes & Fees:</span>
+                    <span id="taxes">LKR 2500</span>
+                </div>
+                <div class="price-row price-total">
+                    <span>Total Amount:</span>
+                    <span id="totalAmount">LKR 17,500</span>
+                </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="form-actions">
+                <button type="button" class="btn btn-primary" onclick="resetForm()">Reset Form</button>
+                <button type="submit" class="btn btn-primary">Complete Booking</button>
+            </div>
+        </form>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Processing your booking...</p>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            <h3>🎉 Booking Confirmed!</h3>
+            <p>Your reservation has been successfully submitted. You will receive a confirmation email shortly.</p>
+        </div>
+    </div>
+	
+	<	
+   <!-- Property Categories -->
+    <section id="categories" class="section" style="background: var(--off-white);">
+        <div class="container">
+            <h2 class="section-title">Property Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="category-title">Luxury Hotels</div>
+                    <div class="category-count">156 properties</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <div class="category-title">Boutique Stays</div>
+                    <div class="category-count">89 properties</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <div class="category-title">Beach Villas</div>
+                    <div class="category-count">124 properties</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="category-title">Eco Resorts</div>
+                    <div class="category-count">67 properties</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="category-title">Hill Stations</div>
+                    <div class="category-count">93 properties</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="category-title">Guest Houses</div>
+                    <div class="category-count">201 properties</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Guests Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Serendip Stays made our Sri Lankan adventure unforgettable! The booking process was seamless, and the hotel recommendations were perfect for our needs."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MJ</div>
+                        <div class="author-info">
+                            <h4>Michael Johnson</h4>
+                            <span>Travel Blogger, UK</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The cultural heritage hotels recommended through Serendip Stays exceeded our expectations. Great value and authentic Sri Lankan experience!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RK</div>
+                        <div class="author-info">
+                            <h4>Raj Kumar</h4>
+                            <span>Business Traveler, India</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section" style="background: var(--primary-turquoise); color: white;">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: white; margin-bottom: 1rem;">Stay Updated with Special Offers</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">Subscribe to our newsletter and get exclusive deals on Sri Lankan accommodations</p>
+            <div style="max-width: 500px; margin: 0 auto; display: flex; gap: 1rem;">
+                <input type="email" placeholder="Enter your email address" style="flex: 1; padding: 1rem; border: none; border-radius: 8px; font-size: 1rem;">
+                <button class="btn" style="background: var(--warm-terracotta); color: white; white-space: nowrap;">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Serendip Stays</h3>
+                    <p>Discover the best accommodations across Sri Lanka, from luxury resorts to authentic guest houses. Your perfect stay awaits in the Pearl of the Indian Ocean.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Destinations</h3>
+                    <ul>
+                        <li><a href="#">Colombo Hotels</a></li>
+                        <li><a href="#">Kandy Accommodations</a></li>
+                        <li><a href="#">Galle Heritage Stays</a></li>
+                        <li><a href="#">Nuwara Eliya Resorts</a></li>
+                        <li><a href="#">Bentota Beach Hotels</a></li>
+                        <li><a href="#">Mirissa Villas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Property Types</h3>
+                    <ul>
+                        <li><a href="#">Luxury Hotels</a></li>
+                        <li><a href="#">Boutique Stays</a></li>
+                        <li><a href="#">Beach Resorts</a></li>
+                        <li><a href="#">Eco Lodges</a></li>
+                        <li><a href="#">Guest Houses</a></li>
+                        <li><a href="#">Villas & Apartments</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Booking Support</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                        <li><a href="#">Travel Guidelines</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Serendip Stays. All rights reserved. | Privacy Policy | Terms of Service</p>
+                <p></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background change on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(26, 123, 136, 0.98)';
+            } else {
+                header.style.background = 'rgba(26, 123, 136, 0.95)';
+            }
+        });
+
+        // Search functionality
+        document.querySelector('.search-btn').addEventListener('click', function() {
+            const destination = document.getElementById('destination').value;
+            const checkin = document.getElementById('checkin').value;
+            const checkout = document.getElementById('checkout').value;
+            const guests = document.getElementById('guests').value;
+            
+            if (!destination || !checkin || !checkout) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            // Simulate search
+            alert(Searching for accommodations in ${destination} from ${checkin} to ${checkout} for ${guests} guest(s));
+        });
+
+        // Newsletter subscription
+        document.querySelector('section[style*="background: var(--primary-turquoise)"] button').addEventListener('click', function() {
+            const email = this.previousElementSibling.value;
+            if (email && email.includes('@')) {
+                alert('Thank you for subscribing to our newsletter!');
+                this.previousElementSibling.value = '';
+            } else {
+                alert('Please enter a valid email address');
+            }
+        });
+
+        // Mobile menu toggle (basic implementation)
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            if (nav.style.di
